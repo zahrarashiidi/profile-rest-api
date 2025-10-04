@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder ".", "/vagrant"
 
   # Port forwarding برای Django
-  config.vm.network "forwarded_port", guest: 8080, host: 8080, host_ip: "127.0.0.1"
+  config.vm.network "forwarded_port", guest:8080, host: 8080, host_ip: "127.0.0.1"
 
   # Provisioning با Shell
   config.vm.provision "shell", inline: <<-SHELL
